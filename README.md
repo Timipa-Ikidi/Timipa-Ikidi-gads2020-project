@@ -1,1 +1,1 @@
-# Timipa-Ikidi-gads2020-project
+# Ikidi's GADS Project Submissions

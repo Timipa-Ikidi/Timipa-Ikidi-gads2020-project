@@ -1,0 +1,39 @@
+# Creating Virtual Machines in the Cloud
+
+# To Create a VM using the Command Line below
+gloud compute --project=qwiklabs-gcp-00-e7d58fa9129d instances create myfirst-vm --zone=us-central1c
+--machine-type=e2-medium --subnet=default
+
+
+# Creating a Windows Virtual Machine 
+gcloud compute --project=qwiklabs-gcp-00-e7d58fa9129 instances create mysecond-vm --zone=europe-west2-a
+--machine-type=e2-medium --subnet=default
+
+#Creating Firewall Rules using the Command Line Interface
+gcloud compute --project=qwiklabs-gcp-00-e7d58fa9129 firewall-rules create default-allow-http --direction
+=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 
+--target-tags=http-server
+
+gcloud compute --project=qwiklabs-gcp-00-e7d58fa9129 firewall-rules create default-allow-https --direction
+=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 
+--target-tags=https-server
+
+#Connect Via SSH to your Custom Machine
+
+# Information about the VM's Memory 
+free
+
+#RAM Details
+student-00-8c8817d610ef@mycustomvm-1:~$sudo dmidecode -t 17
+
+#Number of Processors
+student-00-8c8817d610ef@mycustomvm-1:~$ nproc
+
+#Details on CPU on Virtual Machine
+student-00-8c8817d610ef@mycustomvm-1: lscpu
+
+# To Exit Cloud Shell Environment
+
+exit
+
+
